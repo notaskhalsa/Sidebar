@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Sidebar</title>
+</head>
+<body>
+    <div class="container">
+        <a href="#" onclick="hamburger()" class="menu-btn">
+            <i class="fas fa-bars fa-2x" id="ham-btn"></i>
+        </a>
+
+        <aside class="sidebar">
+
+            <div class="sidebar-heading">
+                <div class="logo">
+                    <a class="logo-name">ASKHALSA LOGO</a>
+                </div>
+    
+                <a class="close-btn" onclick="hamburger()">
+                    <i class="fas fa-times"></i>
+                </a>    
+            </div>
+
+            <ul class="main-nav">
+                <li><a class="current-page" href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Product</a></li>
+                <li><a href="#">Pricing</a></li>
+            </ul>
+
+        </aside>
+
+    </div>
+
+    <script type="text/javascript">
+        function hamburger(){
+            if(screen.width >= 768){
+                const x = document.querySelector(".sidebar");
+                if(x.style.display === "block"){
+                    x.style.display = "none";
+                }
+                else{
+                    x.style.display = "block";
+                }
+            }
+            }
+    </script>
+
+
+</body>
+</html>
